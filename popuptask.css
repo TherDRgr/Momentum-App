@@ -13,12 +13,12 @@
 
 .popup .content {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 160%;
+  left: 80%;
   transform: translate(-50%, -50%) scale(0);
   background: rgba(17, 17, 17, 0.5);
-  width: 450px;
-  height: 400px;
+  width: 410px;
+  height: 355px;
   color: white;
   z-index: 2;
   text-align: center;
