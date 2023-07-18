@@ -38,13 +38,7 @@ function setBg() {
     }
 }
 
-function getName() {
-    if (localStorage.getItem('name') === null) {
-        name.textContent = "[Enter Name]";
-    } else {
-        name.textContent = localStorage.getItem('name');
-    }
-}
+
 
 function getFocus() {
     if (localStorage.getItem('focus') === null) {
@@ -54,34 +48,11 @@ function getFocus() {
     }
 }
 
-if (localStorage.getItem('name') === null && localStorage.getItem('focus') === null) {
-    Swal.mixin({
-        input: 'text',
-        confirmButtonText: 'Next &rarr;',
-        progressSteps: ['1', '2']
-    }).queue([
-        {
-            title: "Your Name"
-        },
-        {
-            title: "Your Focus"
-        }
-    ]).then((result) => {
-        if (result.value) {
-            Swal.fire({
-                title: 'All done!',
-                html: `
-              <p>Your Name: ${result.value[0]}</p>
-              <p>Your Focus: ${result.value[1]}</p>
-            `,
-                confirmButtonText: 'Way to Go!'
-            })
+
 
             localStorage.setItem('name', result.value[0]);
             localStorage.setItem('focus', result.value[1]);
-        }
-    })
-}
+
 
 axios.get('https://api.quotable.io/random').then(res => {
     content.textContent = res.data.content;

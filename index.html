@@ -70,10 +70,13 @@
     </button>
 
     <div class="main">
-      <span id="time">17:00:00</span>
+      <div id="container">
+        <h2 id="clock"></h2>
+      </div>
+      
       <h1>
         <span id="greeting">Good morning, </span>
-        <span id="name"></span>
+        <input type="text" id="name" required />
       </h1>
       <h2>What is your main focus for today?</h2>
       <h2 id="focus"></h2>
@@ -90,5 +93,6 @@
     <script src="./script.js" defer></script>
     <script src="main.js"></script>
     <script src="./popup.js"></script>
+    <script src="./showname.js"></script>
   </body>
 </html>
